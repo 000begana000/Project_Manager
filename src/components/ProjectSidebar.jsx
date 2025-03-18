@@ -1,4 +1,4 @@
-import Button from "./Button";
+import Button from "./UI/Button";
 export default function ProjectSidebar() {
   return (
     <div className="project-sidebar">
