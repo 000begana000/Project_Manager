@@ -35,9 +35,7 @@ h1 {
 .button {
   padding: 12px 20px;
   border-radius: 12px;
-  background-color: #c3b9f2;
   border: none;
-  margin-top: 36px;
 }
 
 .button:hover {
@@ -45,11 +43,17 @@ h1 {
 }
 
 .button-purple {
+  margin-top: 36px;
   background-color: #c3b9f2;
 }
 
 .button-green {
   background-color: #d9ddc1;
+}
+
+.button-transparant {
+  background-color: transparent;
+  border: black solid 1px;
 }
 
 .container {
@@ -68,15 +72,26 @@ h1 {
   padding: 78px 35px;
 }
 
-.no-project {
+.content {
   width: 70vw;
   height: 100%;
   background-color: #d9ddc1;
   margin-left: 20px;
   border-radius: 30px;
+}
+
+.no-project {
   text-align: center;
 
   .headline {
     margin-top: 128px;
   }
+}
+
+.new-project {
+  padding: 67px 133px;
+}
+
+.buttons {
+  text-align: right;
 }

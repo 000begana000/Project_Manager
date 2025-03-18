@@ -1,11 +1,38 @@
+import { useState } from "react";
+
 import ProjectSidebar from "./components/ProjectSidebar";
 import NoProject from "./components/NoProject";
+import NewProject from "./components/NewProject";
 
 function App() {
+  const [projectsState, setProjectsState] = useState({
+    selectedProjectId: undefined,
+    projects: [],
+  });
+
+  function handleStartAddProject() {
+    setProjectsState(prevState => {
+      return {
+        ...prevState,
+        selectedProjectId: null,
+      };
+    });
+  }
+
+  console.log(projectsState.selectedProjectId);
+
+  let content;
+
+  if (projectsState.selectedProjectId === undefined) {
+    content = <NoProject />;
+  } else if (projectsState.selectedProjectId === null) {
+    content = <NewProject />;
+  }
+
   return (
     <div className="container">
-      <ProjectSidebar />
-      <NoProject />
+      <ProjectSidebar onStartAddProject={handleStartAddProject} />
+      {content}
     </div>
   );
 }
