@@ -51,6 +51,11 @@ h1 {
   background-color: #d9ddc1;
 }
 
+.button-black {
+  background-color: black;
+  color: white;
+}
+
 .button-transparant {
   background-color: transparent;
   border: black solid 1px;
@@ -74,7 +79,6 @@ h1 {
 
 .content {
   width: 70vw;
-  height: 100%;
   background-color: #d9ddc1;
   margin-left: 20px;
   border-radius: 30px;
@@ -89,9 +93,32 @@ h1 {
 }
 
 .new-project {
-  padding: 67px 133px;
+  padding: 67px 113px;
+
+  .new-project-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    li {
+      list-style: none;
+    }
+
+    button {
+      margin-left: 10px;
+    }
+  }
 }
 
-.buttons {
-  text-align: right;
+.inputs {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    margin-bottom: 9px;
+  }
+
+  input {
+    margin-bottom: 16px;
+  }
 }
