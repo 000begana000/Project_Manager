@@ -24,7 +24,7 @@ function App() {
   let content;
 
   if (projectsState.selectedProjectId === undefined) {
-    content = <NoProject />;
+    content = <NoProject onStartAddProject={handleStartAddProject} />;
   } else if (projectsState.selectedProjectId === null) {
     content = <NewProject />;
   }
