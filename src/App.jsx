@@ -60,7 +60,10 @@ function App() {
 
   return (
     <div className="container">
-      <ProjectSidebar onStartAddProject={handleStartAddProject} />
+      <ProjectSidebar
+        onStartAddProject={handleStartAddProject}
+        projects={projectsState.projects}
+      />
       {content}
     </div>
   );
