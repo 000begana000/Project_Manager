@@ -15,10 +15,10 @@ export default function Modal({ children, buttonCaption, ref }) {
   });
 
   return createPortal(
-    <dialog ref={dialog}>
+    <dialog ref={dialog} className="font-paragraph">
       {children}
       <form method="dialog">
-        <Button>{buttonCaption}</Button>
+        <Button black>{buttonCaption}</Button>
       </form>
     </dialog>,
     document.getElementById("modal-root")

@@ -12,6 +12,19 @@ body {
   }
 }
 
+dialog {
+  padding: 50px;
+  text-align: center;
+  border: none;
+  border-radius: 30px;
+  margin-top: 250px;
+
+  p:first-child {
+    font-size: 23px;
+    font-weight: 700;
+  }
+}
+
 .font-headline {
   font-family: "Modak", system-ui;
   font-weight: 400;

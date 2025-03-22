@@ -35,7 +35,8 @@ export default function NewProject({ onCancel, onAdd }) {
   return (
     <>
       <Modal ref={dialog} buttonCaption="Close">
-        <p>something went wrong</p>
+        <p>Oops.. looks like you forgot to enter a value.</p>
+        <p>Please make sure you provide a valid value for every input field.</p>
       </Modal>
       <div className="content new-project">
         <menu className="new-project-buttons">
