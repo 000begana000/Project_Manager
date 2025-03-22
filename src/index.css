@@ -99,6 +99,8 @@ h1 {
 
     button {
       width: 100%;
+      text-align: left;
+      padding-left: 33px;
     }
   }
 }
