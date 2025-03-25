@@ -1,5 +1,9 @@
 import Button from "./UI/Button";
-export default function ProjectSidebar({ onStartAddProject, projects }) {
+export default function ProjectSidebar({
+  onStartAddProject,
+  projects,
+  onSelect,
+}) {
   return (
     <div className="project-sidebar">
       <h1 className="font-headline">your project</h1>
@@ -9,7 +13,9 @@ export default function ProjectSidebar({ onStartAddProject, projects }) {
       <ul className="projects">
         {projects.map(project => (
           <li key={project.id}>
-            <Button green>{project.title}</Button>
+            <Button green onClick={() => onSelect(project.id)}>
+              {project.title}
+            </Button>
           </li>
         ))}
       </ul>
