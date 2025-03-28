@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import { ProjectContext } from "./store/project-context";
+
 import ProjectSidebar from "./components/ProjectSidebar";
 import NoProject from "./components/NoProject";
 import NewProject from "./components/NewProject";
@@ -88,14 +90,21 @@ function App() {
   }
 
   return (
-    <div className="container">
-      <ProjectSidebar
-        onStartAddProject={handleStartAddProject}
-        projects={projectsState.projects}
-        onSelect={handleSelectProject}
-      />
-      {content}
-    </div>
+    <ProjectContext
+      value={{
+        selectedProjectId: undefined,
+        projects: [],
+      }}
+    >
+      <div className="container">
+        <ProjectSidebar
+          onStartAddProject={handleStartAddProject}
+          projects={projectsState.projects}
+          onSelect={handleSelectProject}
+        />
+        {content}
+      </div>
+    </ProjectContext>
   );
 }
 
